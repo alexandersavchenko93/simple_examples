@@ -10,7 +10,6 @@ void mySwap(T&a, T&b)
     T tmp = a;
     a = b;
     b = tmp;
-    //cout<<*a<<" "<<*b<<endl;
 %>
 
 int main(int argc, const char * argv[]) {
