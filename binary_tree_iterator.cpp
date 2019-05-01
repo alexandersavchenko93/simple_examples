@@ -57,7 +57,7 @@ private:
             //Есть ли родитель
             if(value->parent == nullptr)
                 value = nullptr;
-            //Равен ли родитель и правый елемент
+            //Равен ли правый елемент текущему значению
             else if(value->parent->right.get() == value)
                 value = value->parent;
             else
