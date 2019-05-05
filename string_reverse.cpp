@@ -3,7 +3,7 @@ using namespace std;
 
 void reverse(char* str)
 {
-    char tmp[strlen(str)];
+    char* tmp = new char[strlen(str)];
     for(int i = 0; i<strlen(str);++i)
     {
         tmp[i] = str[strlen(str) - i - 1];
@@ -13,6 +13,6 @@ void reverse(char* str)
 }
 
 int main(int argc, const char * argv[]) {
-    //reverse("123");
+    reverse("123");
     return 0;
 }
