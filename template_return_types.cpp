@@ -41,6 +41,17 @@ void f1(T param){};
 template<typename T>
 void f2(T& param){};
 
+//auto createInitList() - не компилируется, и также не работает как параметр в лямбдах с++14
+//{
+//    return {1,2,3};
+//}
+
+decltype(auto) returnZero() //Функция вернет ссылку на локальную переменную что ведет к неопредеоенному поведению,хотя на большенстве современных компиляторах это уже учтено)!
+{
+    int x = 1;
+    return (x);
+}
+
 int main(int argc, const char * argv[]) {
     
     //Template 1
@@ -88,6 +99,12 @@ int main(int argc, const char * argv[]) {
     ///Указатель на функцию
     f1(someFunc); //param - void(*) (int) - передается по значению
     f2(someFunc); //param - void(&) (int) - передается по ссылке
+    
+    ///AUTO - работает также как вывод типа для Т кроме одного исключения
+    auto x1 = {1}; //std::initializer_list
+    auto x2 { 27 };//on macOS XCode - int!
+    
+    auto res = returnZero();
     
     return 0;
 }
