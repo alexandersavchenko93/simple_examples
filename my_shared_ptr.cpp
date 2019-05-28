@@ -57,8 +57,6 @@ protected:
         if (*ref_count == 0) {
             delete ref;
             delete ref_count;
-            ref = nullptr;
-            ref_count = nullptr;
             cout<<"Object Deleted"<<endl;
         }
     }
@@ -75,9 +73,14 @@ protected:
 int main(int argc, const char * argv[]) {
     
     int* a = new int(5);
+    int* b = new int(7);
     SharedPointer<int> sa(a);
     SharedPointer<int> sb(sa);
-    SharedPointer<int> sc = sa;
+    SharedPointer<int> sc(b);
+    //sb = sb;
     sb = sc;
+    
+    int c = *sc;
+    cout<<c<<endl;
     return 0;
 }
