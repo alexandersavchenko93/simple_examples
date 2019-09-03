@@ -66,6 +66,9 @@ protected:
             cout<<"Deleted "<<*ref<<endl;
             delete ref;
             delete ref_count;
+
+            ref = nullptr;
+            ref_count = nullptr;
         }
     }
     
