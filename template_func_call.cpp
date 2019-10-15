@@ -15,8 +15,8 @@ struct S{};
 template<typename T>
 void call_adl(T t)
 {
-    adl(S()); //Независимый от типа ищет в шаблоне
-    adl(t); //Зависимый от типа Т ищется позже
+    adl(S());
+    adl(t);
 }
 
 //S
