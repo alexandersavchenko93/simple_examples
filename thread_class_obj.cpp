@@ -34,6 +34,15 @@ int main(int argc, char** argv) {
     thread th1;
     thread th2;
     
+    //STD::BIND_CASE    
+    //     auto func = std::bind(&A<int>::foo, &a, std::placeholders::_1);
+    //     int b = 80;
+    //     th1 = thread([&](int b)
+    //     {
+    //         func(b);
+    //     }, b);
+    //     th1.join();
+    
     th1 = thread(&A<int>::foo,&a,80);
     th1.join();
     
