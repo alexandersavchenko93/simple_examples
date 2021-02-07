@@ -18,6 +18,13 @@ template<class T>
 class SharedPointer
 {
 public:
+    // Default
+    SharedPointer()
+    {
+        ref = nullptr;
+        ref_count = nullptr;
+    }
+    
     //Когда приходит дата делем ее сет во внутренний указатель
     //Создаем динамически счетчик ссылок на обьект
     SharedPointer(T* ptr)
@@ -37,7 +44,10 @@ public:
     
     ~SharedPointer()
     {
-        remove();
+        if(ref != nullptr && ref_count != nullptr)
+        {
+            remove();   
+        }
     }
     
     SharedPointer& operator=(SharedPointer & sptr) {
