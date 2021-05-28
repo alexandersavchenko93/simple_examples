@@ -28,6 +28,8 @@ int main(int argc, const char * argv[]) {
     A a;
     Hack h;
     
+    a.printA();
+    
     // First method
     ((Hack*)&a)->iHack = 12;
     ((Hack*)&a)->sHack = "Bob";
