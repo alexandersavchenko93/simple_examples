@@ -28,9 +28,13 @@ int main(int argc, const char * argv[]) {
     A a;
     Hack h;
     
+    // First method
     ((Hack*)&a)->iHack = 12;
     ((Hack*)&a)->sHack = "Bob";
     
+    a.printA();
+    
+    // Second method
     reinterpret_cast<Hack*>(&a)->iHack = 777;
     reinterpret_cast<Hack*>(&a)->sHack = "Max";
     
