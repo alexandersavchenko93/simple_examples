@@ -14,8 +14,8 @@ void mySwap(T&a, T&b)
 
 int main(int argc, const char * argv[]) {
     
-    char* x = "Hello";
-    char* y = "World";
+    const char* x = "Hello";
+    const char* y = "World";
     
     int* a = new int(1);
     int* b = new int(2);
