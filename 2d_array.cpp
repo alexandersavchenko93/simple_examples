@@ -1,4 +1,3 @@
-//  Created by Александр on 2/25/19.
 //  Copyright © 2021 Александр. All rights reserved.
 #include <iostream>
 using namespace std;
