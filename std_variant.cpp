@@ -1,3 +1,5 @@
+// https://habr.com/ru/post/415737/
+
 #include <iostream>
 #include <string>
 #include <variant>
