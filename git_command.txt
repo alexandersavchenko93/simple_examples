@@ -10,6 +10,6 @@ git push -f
 git checkout develop --recurse-submodules
 git fetch --recurse-submodules
 git pull --recurse-submodules
-git checkout bugfix/INTELLIAS-521-failing-test-headinginformationsystemtest
+git checkout branch/name
 git rebase develop (? merge)
 git push -f
