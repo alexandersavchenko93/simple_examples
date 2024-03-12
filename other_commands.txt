@@ -5,3 +5,6 @@ clang-format-7 -style=file -i <path to file>
 // cpp-dependencychecker
 
 BOOST_ROOT=/home/olehkis/.conan/data/boost/3.3.2+1.81.0/tomtom/stable/package/0dcc59148aad24e5f1ba4ed543aaeaef42767b8e ../cpp-dependencychecker/helper/dependencychecker.sh REGEN
+
+// pulse audio
+pulseaudio --check && (pulseaudio -k || sudo killall pulseaudio)
